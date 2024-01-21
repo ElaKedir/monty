@@ -1,3 +1,5 @@
+#define  _POSIX_C_SOURCE 200809L
+
 #include "monty.h"
 
 bus_t bus = {NULL, NULL, NULL, 0};
@@ -34,7 +36,7 @@ int main(int argc, char *argv[])
 	{
 		contents = NULL;
 		read_line = getline(&contents, &size, file);
-		bus.contents = contents;
+		bus.content = contents;
 		counter++;
 		if (read_line > 0)
 		{
